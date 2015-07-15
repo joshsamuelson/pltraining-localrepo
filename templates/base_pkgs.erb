@@ -1,23 +1,25 @@
 <% #Centos 7 specific packages %>
 <% if @operatingsystemmajrelease == "7" %>
-zlib-devel
-make
-policycoreutils-python
 fontpackages-filesystem
-mariadb-libs
-mariadb
+gcc-c++
 libaio
+libstdc++-devel
+make
+mariadb
+mariadb-libs
 mariadb-server
 perl-Compress-Raw-Bzip2
 perl-Compress-Raw-Zlib
-perl-DBD-MySQL
 perl-DBD
+perl-DBD-MySQL
 perl-Data-Dumper
 perl-IO-Compress
 perl-Net-Daemon
 perl-PlRPC
 php-mysql
 php-pdo
+policycoreutils-python
+zlib-devel
 <% end %>
 
 ConsoleKit
