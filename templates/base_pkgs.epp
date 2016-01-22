@@ -1,5 +1,5 @@
 <% #Centos 7 specific packages %>
-<% if @operatingsystemmajrelease == "7" %>
+<% if $release == "7" %>
 ed
 c-ares
 c-ares-devel

@@ -1,5 +1,5 @@
 <% #Centos 7 specific packages %>
-<% if @operatingsystemmajrelease == "7" %>
+<% if $release == "7" %>
 krb5-devel
 openssl-devel
 <% end %>
