@@ -1,5 +1,5 @@
 <%# Centos 7 specific packages -%>
-<% if $release == "7" %>
+<% if $release == "7" { %>
 postfix
 <%# npm dependencies -%>
 mg
@@ -86,7 +86,7 @@ nodejs-uid-number
 nodejs-which
 v8
 v8-devel
-<% end -%>
+<% } -%>
 
 django-tagging
 Django14

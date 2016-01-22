@@ -1,8 +1,8 @@
 <% #Centos 7 specific packages %>
-<% if $release == "7" %>
+<% if $release == "7" { %>
 krb5-devel
 openssl-devel
-<% end %>
+<% } %>
 
 libjpeg-turbo
 libxml2

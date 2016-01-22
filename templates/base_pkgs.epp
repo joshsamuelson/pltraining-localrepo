@@ -1,5 +1,5 @@
 <% #Centos 7 specific packages %>
-<% if $release == "7" %>
+<% if $release == "7" { %>
 ed
 c-ares
 c-ares-devel
@@ -33,7 +33,7 @@ perl-Net-Daemon
 perl-PlRPC
 php-mysql
 php-pdo
-<% end %>
+<% } %>
 
 ConsoleKit
 ConsoleKit-libs
