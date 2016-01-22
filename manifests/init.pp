@@ -40,7 +40,7 @@ class localrepo {
                    "${base}/mirror/centos/6",
                    "${base}/mirror/centos/6/os",
                    "${base}/mirror/centos/6/updates",
-                   "${base}/mirror/centos/6/extras", ]
+                   "${base}/mirror/centos/6/extras", 
                    "${base}/mirror/centos/7",
                    "${base}/mirror/centos/7/os",
                    "${base}/mirror/centos/7/updates",
@@ -62,7 +62,7 @@ class localrepo {
 
     ## Build the "base" repo
     localrepo::pkgsync { "base_pkgs_${info['arch']}":
-      pkglist  => epp("localrepo/base_pkgs.epp",{'release' => $info['release']},
+      pkglist  => epp("localrepo/base_pkgs.epp",{'release' => $info['release']}),
       repopath => "${base}/mirror/centos/${info['release']}/os/${info['arch']}",
       syncer   => "yumdownloader",
       source   => "base",
@@ -77,7 +77,7 @@ class localrepo {
     
     ## Build the "extras" repo
     localrepo::pkgsync { "extras_pkgs_${info['arch']}":
-      pkglist  => epp("localrepo/extras_pkgs.epp",{'release' => $info['release']},
+      pkglist  => epp("localrepo/extras_pkgs.epp",{'release' => $info['release']}),
       repopath => "${base}/mirror/centos/${info['release']}/extras/${info['arch']}",
       syncer   => "yumdownloader",
       source   => "base",
@@ -92,7 +92,7 @@ class localrepo {
 
     ## Build the "updates" repo
     localrepo::pkgsync { "updates_pkgs_${info['arch']}":
-      pkglist  => epp("localrepo/updates_pkgs.epp",{'release' => $info['release']},
+      pkglist  => epp("localrepo/updates_pkgs.epp",{'release' => $info['release']}),
       repopath => "${base}/mirror/centos/${info['release']}/updates/${info['arch']}",
       syncer   => "yumdownloader",
       source   => "base",
@@ -107,7 +107,7 @@ class localrepo {
 
     ## Build the "epel" repo
     localrepo::pkgsync { "epel_pkgs_${info['arch']}":
-      pkglist  => epp("localrepo/epel_pkgs.epp",{'release' => $info['release']},
+      pkglist  => epp("localrepo/epel_pkgs.epp",{'release' => $info['release']}),
       repopath => "${base}/mirror/epel/${info['release']}/local/${info['arch']}",
       syncer   => "yumdownloader",
       source   => "epel",
