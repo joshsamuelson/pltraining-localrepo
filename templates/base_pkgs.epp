@@ -1,4 +1,4 @@
-<% #Centos 7 specific packages %>
+<%# Centos 7 specific packages %>
 <% if $release == "7" { %>
 ed
 c-ares
